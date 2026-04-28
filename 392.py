@@ -1,11 +1,9 @@
 class Solution:
     def isSubsequence(self, s, t):
-        if not s:
-            return True
-        if not t:
-            return False
-        
-        if s[0] == t[0]:
-            return self.isSubsequence(s[1:], t[1:])
-        
-        return self.isSubsequence(s, t[1:])
+        i = 0
+
+        for ch in t:
+            if i < len(s) and s[i] == ch:
+                i += 1
+
+        return i == len(s)
