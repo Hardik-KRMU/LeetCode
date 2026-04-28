@@ -1,11 +1,12 @@
-from collections import Counter
-
 class Solution:
     def firstUniqChar(self, s):
-        c = Counter(s)
+        count = {}
 
-        for i, ch in enumerate(s):
-            if c[ch] == 1:
+        for ch in s:
+            count[ch] = count.get(ch, 0) + 1
+
+        for i in range(len(s)):
+            if count[s[i]] == 1:
                 return i
 
         return -1
