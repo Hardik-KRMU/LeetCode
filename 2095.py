@@ -3,8 +3,7 @@ class Solution:
         if not head.next:
             return None
 
-        slow = head
-        fast = head
+        slow = fast = head
         prev = None
 
         while fast and fast.next:
