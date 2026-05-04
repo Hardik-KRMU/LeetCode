@@ -5,7 +5,7 @@ class Solution:
 
         rows = [""] * numRows
         cur = 0
-        step = 1  # direction: down = +1, up = -1
+        step = 1
 
         for ch in s:
             rows[cur] += ch
