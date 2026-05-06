@@ -17,4 +17,6 @@ class Solution:
         res = [[0] * m for _ in range(n)]
         for r in range(m):
             for c in range(n):
-                
+                res[c][m - 1 - r] = box[r][c]
+
+        return res
