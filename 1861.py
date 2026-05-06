@@ -16,4 +16,5 @@ class Solution:
         # rotate 90° clockwise
         res = [[0] * m for _ in range(n)]
         for r in range(m):
-           
+            for c in range(n):
+                
