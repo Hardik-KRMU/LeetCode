@@ -1,4 +1,4 @@
-cclass Solution:
+class Solution:
     def rotateTheBox(self, box):
         m, n = len(box), len(box[0])
 
@@ -12,3 +12,6 @@ cclass Solution:
                     box[r][c] = '.'
                     box[r][empty] = '#'
                     empty -= 1
+
+        # rotate 90° clockwise
+        
