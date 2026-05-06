@@ -14,4 +14,5 @@ class Solution:
                     empty -= 1
 
         # rotate 90° clockwise
+        res = [[0] * m for _ in range(n)]
         
