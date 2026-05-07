@@ -14,4 +14,15 @@ class Solution:
 
         suf_min = nums[-1]
 
-        
+        # process from right to left
+        for i in range(n - 2, -1, -1):
+
+            # if we can connect with the right side
+            if pre[i] > suf_min:
+                ans[i] = ans[i + 1]
+            else:
+                ans[i] = pre[i]
+
+            suf_min = min(suf_min, nums[i])
+
+        return ans
