@@ -9,4 +9,9 @@ class Solution:
         for i in range(1, n):
             pre[i] = max(pre[i - 1], nums[i])
 
-       
+        ans = [0] * n
+        ans[-1] = pre[-1]
+
+        suf_min = nums[-1]
+
+        
