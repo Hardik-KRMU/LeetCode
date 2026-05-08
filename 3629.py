@@ -28,3 +28,13 @@ class Solution:
                     while x % d == 0:
                         x //= d
                 d += 1
+
+            if x > 1:
+                div[x].append(i)
+
+        q = deque([(0, 0)])   # index, steps
+        vis = {0}
+        used_prime = set()
+
+        while q:
+           
