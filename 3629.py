@@ -45,4 +45,14 @@ class Solution:
             # adjacent moves
             for ni in (i - 1, i + 1):
                 if 0 <= ni < n and ni not in vis:
-            
+                    vis.add(ni)
+                    q.append((ni, steps + 1))
+
+            val = nums[i]
+
+            # teleportation
+            if is_prime(val) and val not in used_prime:
+                for ni in div[val]:
+                    if ni not in vis:
+                        vis.add(ni)
+     
