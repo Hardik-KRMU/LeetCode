@@ -55,4 +55,6 @@ class Solution:
                 for ni in div[val]:
                     if ni not in vis:
                         vis.add(ni)
-     
+                        q.append((ni, steps + 1))
+
+                used_prime.add(val)
