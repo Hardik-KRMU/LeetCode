@@ -37,4 +37,12 @@ class Solution:
         used_prime = set()
 
         while q:
-           
+            i, steps = q.popleft()
+
+            if i == n - 1:
+                return steps
+
+            # adjacent moves
+            for ni in (i - 1, i + 1):
+                if 0 <= ni < n and ni not in vis:
+            
