@@ -23,3 +23,8 @@ class Solution:
             d = 2
 
             while d * d <= x:
+                if x % d == 0:
+                    div[d].append(i)
+                    while x % d == 0:
+                        x //= d
+                d += 1
